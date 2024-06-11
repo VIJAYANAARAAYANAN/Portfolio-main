@@ -1,0 +1,366 @@
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.skillheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    animation: slideInTop 1s ease-in-out forwards; 
+}
+.title h1 {
+    font-size: 30px;
+    border-bottom: 2px solid #ffa200;
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.skillcolor {
+    color: #ffa200;
+    font-weight: 800;
+    padding-bottom: 0px;
+}
+
+/* Skills section styles */
+.skills-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    row-gap: 15px;
+    column-gap: 100px;
+    width: 80%;
+    height: 250px;
+}
+.text-element,
+.image-element {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.text-element.show,
+.image-element.show {
+    opacity: 1;
+}
+
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateY(20px); 
+    opacity: 0; 
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.skill.show {
+    transform: translateY(0); 
+    opacity: 1; 
+    height: auto;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill-icon {
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.skill-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill-icon p {
+    font-size: 20px;
+    padding-left: 10px;
+    opacity: 5;  
+}
+
+.skill.show .skill-icon p {
+    opacity: 1;
+    transition: opacity 5s ease-in;
+}
+
+
+.skill-progress {
+    width: 105%;
+    height: 12px;
+    margin: 10px 0;
+}
+
+.skill-progress progress {
+    width: 100%;
+    height: 12px;
+    border-radius: 20px;
+    transition: width 1s linear; 
+}
+
+.skill-progress progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+}
+
+.skill-progress progress::-webkit-progress-value {
+    background-color: #ffa200;
+    border-radius: 20px;
+}
+
+.skill-progress progress::-moz-progress-bar {
+    background-color: #ffa200;
+    border-radius: 20px;
+}
+
+
+/* Subskills section */
+.subskills {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+.sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+
+.techskills {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 60%;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: #ffa200;
+}
+
+.techskills h {
+    border-bottom: 3px solid #ffa200;
+}
+.techskills h3{
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom:2px solid #ffa200;
+}
+.techhead {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.gitimg {
+    width: 40px;
+    height: 40px;
+}
+.techicon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subimgto {
+    display: flex;
+    align-content: center;
+    gap:20px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.subimgto img{
+    padding: 5px;
+    border: 1px solid #ffa200;
+    border-radius: 20%;
+}
+
+@media screen and (max-width: 1000px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px;
+        column-gap:20px;
+        width: 80%; 
+    }
+    .skill-progress progress {
+        width: 80%;
+        height: 8px;
+        border-radius: 20px;
+        transition: width 1s linear; 
+    }
+    .techskills {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 20px;
+        width: 60%;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        color: #ffa200;
+    }
+    
+    .techskills h {
+        border-bottom: 2px solid #ffa200;
+    }
+    .techskills h3{
+        font-size: 25px;
+        font-weight: 400;
+        border-bottom:2px solid #ffa200;
+    }
+    .techhead {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    
+    
+    .gitimg {
+        width: 30px;
+        height: 30px;
+    }
+    .techicon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .subimgto {
+        display: flex;
+        align-content: center;
+        gap:10px;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .subimgto img{
+        padding: 5px;
+        border: 1px solid #ffa200;
+        border-radius: 20%;
+    }
+}
+@media screen and (max-width:500px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px;
+        column-gap:10px;
+        width: 100%; 
+        justify-content: center;
+        
+    }
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        transform: translateY(20px); 
+        opacity: 0; 
+        justify-content: center;
+        justify-items: center;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+    .skill-progress{
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .skill.show {
+        transform: translateY(0); 
+        opacity: 1; 
+        height: auto;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill-progress progress {
+        width: 80%;
+        margin-left: 20px;
+        height: 8px;
+        display: flex;
+        justify-content: center;
+        border-radius: 20px;
+        transition: width 1s linear; 
+        text-align: center;
+    }
+    .skills-section{
+        display: flex;
+        align-items:flex-start ;
+        justify-content: space-evenly;
+
+    }
+    .skill-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .skill-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .skill-icon p {
+        font-size: 16px;
+        padding-left: 10px;
+        opacity: 5;  
+    }
+    .techskills h {
+        border-bottom: 3px solid #ffa200;
+    }
+    .techskills h3{
+        font-size:20px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        border-bottom:2px solid #ffa200;
+    }
+    .techhead {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+    }
+    .subimgto {
+        
+        display: flex;
+        align-content: center;
+        gap:10px;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .subimgto img{
+        width: 40px;
+        padding: 5px;
+        border: 1px solid #ffa200;
+        border-radius: 20%;
+    }
+    
+}
